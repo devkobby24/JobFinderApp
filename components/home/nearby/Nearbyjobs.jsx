@@ -1,4 +1,4 @@
-
+import React from 'react'; 
 import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
 
@@ -16,12 +16,12 @@ const Nearbyjobs = () => {
       query: 'React developer',
       num_pages: '1',
     }
-  );
+  ); 
 
   return (
     <View style = {styles.container}>
       <View style = {styles.header}>
-        <Text style={styles.headerTitle}>Nearby Jobs</Text>
+        <Text style={styles.headerTitle}>Nearby Jobs</Text> 
         <TouchableOpacity>
           <Text style= {styles.headerBtn}>Show all</Text> 
         </TouchableOpacity>
@@ -36,11 +36,11 @@ const Nearbyjobs = () => {
             data?.map((job) => (
             <NearbyJobCard 
             job={job}
-            key={`nearby-job-${job.id}`}
-            handleNavigate={() => router.push(`/job-details/${job_job.id}`)}
+            key={`nearby-job-${job.job_id}`}
+            handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
             />
-             ))
-          ) }
+          ))
+        )}
       </View>
     </View>
   );
