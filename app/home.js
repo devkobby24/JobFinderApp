@@ -1,4 +1,5 @@
-import {View, Text, ScrollView, SafeAreaView } from 'react-native';
+/* eslint-disable react/react-in-jsx-scope */
+import {View, ScrollView, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 import { Stack, useRouter } from 'expo-router';    
 

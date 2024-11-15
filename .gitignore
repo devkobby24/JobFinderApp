@@ -1,14 +1,44 @@
+# Node modules and environment files
 node_modules/
+.env
+.env.local
+.env.production
+.env.test
+
+# Build output
 .expo/
 dist/
-npm-debug.*
+web-build/
+
+# Debug and logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS system files
+.DS_Store
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# React Native specific
+android/app/build/
+ios/Pods/
 *.jks
+*.keystore
+
+# Expo specific
+.expo-shared/
+
+# Other system files
+*.orig.*
 *.p8
 *.p12
 *.key
 *.mobileprovision
-*.orig.*
-web-build/
 
-# macOS
-.DS_Store
+# Other miscellaneous
+coverage/
+*.bak
+*.tmp

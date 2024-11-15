@@ -3,9 +3,15 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      "@babel/plugin-proposal-export-namespace-from",
+      "@babel/plugin-transform-export-namespace-from",
+      [
+        'module:react-native-dotenv',
+        {
+          moduleName: '@env',
+          path: '.env.local',
+        },
+      ],
       "react-native-reanimated/plugin",
-      require.resolve("expo-router/babel"),
     ],
   };
 };
