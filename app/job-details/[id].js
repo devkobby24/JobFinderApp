@@ -4,6 +4,7 @@ import { Stack, useRouter, useLocalSearchParams } from 'expo-router';
 import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } from '../../components';
 import { COLORS, icons, SIZES } from '../../constants';
 import axios from 'axios';
+import {RAPIDAPI_KEY} from '@env'
 
 const tabs = ["About", "Qualifications", "Responsibilities"];
 
@@ -29,7 +30,7 @@ const JobDetails = () => {
           extended_publisher_details: 'false',
         },
         headers: {
-          'x-rapidapi-key': 'your-api-key', // Replace with your actual API key
+          'x-rapidapi-key': RAPIDAPI_KEY, // Replace with your actual API key
           'x-rapidapi-host': 'jsearch.p.rapidapi.com',
         },
       };
